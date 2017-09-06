@@ -1,0 +1,24 @@
+version: 2
+vlans:
+    100:
+        name: "test"
+        unicast_flood: False
+dps:
+    sw1:
+        dp_id: 0x1
+        hardware: 'Open vSwitch'
+        interfaces:
+            1:
+                native_vlan: 100
+            2:
+                native_vlan: 100
+    sw3:
+        dp_id: 0x3
+        hardware: 'Open vSwitch'
+        interfaces:
+            1:
+                native_vlan: 100
+            2:
+                native_vlan: 100
+            3:
+                native_vlan: 100
